@@ -4,9 +4,8 @@
 
 html {
     background-color: #ffffff;
-    font-size: 16px;
       height: 100%;
-      overflow-x: hidden;
+      
   }
 
 html, body, header, main, section, footer{
@@ -19,8 +18,8 @@ body {
     background-color: rgb(255, 255, 255);    
     color: gray;
     font-family: Mulish;
-    line-height: 1.6;
 	margin: 0;
+    
 
     display: grid;
     grid-template-columns: auto;
@@ -39,9 +38,10 @@ body {
 
 ul {
   margin: 0;
+  padding: 0;
   list-style: none;
+  text-align: center;
 }
-
 
 li:hover {
   cursor: pointer;
@@ -55,26 +55,17 @@ a {
 	text-decoration: none;
 }
 
-.logo {
-	margin: 0;
-	font-size: 1.45em;
-}
-
 .main-nav {
-	margin-top: 5px;
-
-}
-.logo a, .main-nav a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
+	margin-top: 5vh;
+    width: 40vh;
 }
 
 .main-nav a {
-	color: #34495e;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	display: block;
+    color: #34495e;
 	font-size: .99em;
-  width: 8rem;
 }
 
 .main-nav a:hover {
@@ -84,11 +75,12 @@ a {
 .nav {
   grid-area: nav;
   z-index: 1;
-	padding-top: .5em;
+  margin: 0 auto;
 	padding-bottom: .5em;
 	border: 1px solid #ffffff;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 1000px 0px rgb(255, 255, 255);
+    
 }
 
 .logo {
@@ -96,9 +88,9 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: none;
-    height: 10rem;
-    width: 20rem;
-    margin-left: 5rem;
+    height: 15vh;
+    width: 30vh;
+    margin: 0 auto;
 }
 
 #index {
@@ -271,6 +263,8 @@ footer {
     align-self: flex-end;
 }
 
+
+
 /*---------MEDIA QUERIES----------*/
 
 /*NAVIGERING*/
@@ -278,17 +272,13 @@ footer {
 	.nav,
 	.main-nav {
 		display: flex;
+        width: 80%;
+        justify-content: space-between;
 	}
 	.nav {
 		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		margin: 0 auto;
+        background-color: rgb(255, 255, 255);
 	}
-
-    ul li ul {
-        text-align: center;
-    }
 }
 
 @media (min-width: 1025px) {
@@ -296,5 +286,10 @@ footer {
 		flex-direction: row;
 		justify-content: space-between;
     width: 100%;
+    background-color: rgb(255, 255, 255);
 	}
+
+    .main-nav {
+        width: 30%;
+    }
 }
