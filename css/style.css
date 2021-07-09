@@ -11,6 +11,7 @@ html {
 html, body, header, main, section, footer{
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -19,6 +20,7 @@ body {
     color: gray;
     font-family: Mulish;
 	margin: 0;
+    overflow-x: hidden;
     
 
     display: grid;
