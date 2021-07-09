@@ -10,6 +10,7 @@ html {
 
 html, body, header, main, section, footer{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     
 }
@@ -20,7 +21,6 @@ body {
     color: gray;
     font-family: Mulish;
 	margin: 0;
-    overflow-x: hidden;
     
 
     display: grid;
@@ -58,7 +58,7 @@ a {
 }
 
 .main-nav {
-	margin-top: 5vh;
+	margin-top: 15vh;
     width: 40vh;
 }
 
@@ -67,7 +67,7 @@ a {
 	text-transform: uppercase;
 	display: block;
     color: #34495e;
-	font-size: .99em;
+	font-size: 2.5vh;
 }
 
 .main-nav a:hover {
@@ -78,10 +78,9 @@ a {
   grid-area: nav;
   z-index: 1;
   margin: 0 auto;
-	padding-bottom: .5em;
-	border: 1px solid #ffffff;
+	padding-bottom: .5vh;
 	background-color: #ffffff;
-	box-shadow: 0px 0px 1000px 0px rgb(255, 255, 255);
+	box-shadow: 0px 0px 100px 0px rgb(255, 255, 255);
     
 }
 
@@ -90,8 +89,8 @@ a {
     background-size: cover;
     background-position: center;
     background-repeat: none;
-    height: 15vh;
-    width: 30vh;
+    height: 20vh;
+    width: 40vh;
     margin: 0 auto;
 }
 
@@ -276,8 +275,8 @@ footer {
 	.nav,
 	.main-nav {
 		display: flex;
-        width: 80%;
-        justify-content: space-between;
+        width: 100%;
+        justify-content: space-evenly;
 	}
 	.nav {
 		flex-direction: column;
@@ -288,8 +287,8 @@ footer {
 @media (min-width: 1025px) {
 	.nav {
 		flex-direction: row;
-		justify-content: space-between;
-    width: 70%;
+		justify-content: space-evenly;
+    width: 100%;
     background-color: rgb(255, 255, 255);
 	}
 
