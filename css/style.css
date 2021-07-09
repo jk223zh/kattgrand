@@ -79,7 +79,7 @@ a {
   z-index: 1;
   margin: 0 auto;
 	padding-bottom: .5vh;
-	background-color: #ffffff;
+	background-color: #d5e409;
 	box-shadow: 0px 0px 100px 0px rgb(255, 255, 255);
     
 }
@@ -155,8 +155,7 @@ main {
 }
 
  .section1 {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     color: #34495e;
     margin-bottom: 5rem;
 }
@@ -182,8 +181,7 @@ img {
 .card {
   background-color: white;
   border-radius: 0.25rem;
-  margin-bottom: 4rem;
-  width: 25rem;
+  width: 33vh;
   box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
@@ -192,14 +190,14 @@ img {
 .card__content {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 2vh;
 }
 
 .card__title {
   color: grey;
-  font-size: 1.25rem;
+  font-size: 3vh;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0.5vh;
   text-transform: uppercase;
 }
 
@@ -210,16 +208,15 @@ img {
 }
 
 #section2 {
-    margin: 0 auto;
     padding-top: 90px;
-    width:100%;
+    width: 100%;
     color: #34495e;
     background-color: #ffffff;
 }
 
 #hållbarhetWrapper, #underhållWrapper, #grusvägarWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
     margin: 0 auto;
@@ -227,7 +224,7 @@ img {
 }
 
 .textContent {
-    width: 45%;
+    width: 100%;
     font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
@@ -237,8 +234,8 @@ img {
 }
 
 .imgContent {
-    width: 55%;
-    height: 40rem;
+    width: 50%;
+    height: 40vh;
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -249,12 +246,12 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: screen;
-    width: 50%;
+    width: 100%;
 }
 
 #grusvägarWrapper .imgContent {
     background-image: url(/img/katttoa.jpg);
-    width: 50%;
+    width: 100%;
 }
 
 footer {
@@ -280,8 +277,13 @@ footer {
 	}
 	.nav {
 		flex-direction: column;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(199, 20, 20);
 	}
+
+    .card {
+        width: 60vh;
+        margin-bottom: 2vh;
+      }
 }
 
 @media (min-width: 1025px) {
@@ -289,10 +291,61 @@ footer {
 		flex-direction: row;
 		justify-content: space-evenly;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(19, 99, 16);
 	}
 
     .main-nav {
         width: 40%;
+    }
+    .card {
+        width: 50vh;
+        margin-bottom: 2vh;
+      }
+      #section2 {
+        margin: 0 auto;
+        padding-top: 90px;
+        width:100%;
+        color: #34495e;
+        background-color: #ffffff;
+    }
+    
+    #hållbarhetWrapper, #underhållWrapper, #grusvägarWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+    }
+    
+    .textContent {
+        width: 45%;
+        font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      padding-top: 5%;
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+    }
+    
+    .imgContent {
+        width: 55%;
+        height: 40rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+    
+    #underhållWrapper .imgContent {
+        background-image: url(/img/kattsov.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-blend-mode: screen;
+        width: 50%;
+    }
+    
+    #grusvägarWrapper .imgContent {
+        background-image: url(/img/katttoa.jpg);
+        width: 50%;
     }
 }
