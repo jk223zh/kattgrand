@@ -1,0 +1,300 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+
+html {
+    background-color: #ffffff;
+    font-size: 16px;
+      height: 100%;
+      overflow-x: hidden;
+  }
+
+html, body, header, main, section, footer{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background-color: rgb(255, 255, 255);    
+    color: gray;
+    font-family: Mulish;
+    line-height: 1.6;
+	margin: 0;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+
+.center{
+    text-align: center;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+
+li:hover {
+  cursor: pointer;
+}
+
+h2, h3, a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a, .main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+  width: 8rem;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+.nav {
+  grid-area: nav;
+  z-index: 1;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #ffffff;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 1000px 0px rgb(255, 255, 255);
+}
+
+.logo {
+    background-image: url(/img/kattgrändlogga.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    height: 10rem;
+    width: 20rem;
+    margin-left: 5rem;
+}
+
+#index {
+    grid-area: header;
+    display: border-box;
+    background-image: url(/img/kattkok.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+html, body, #hero, #overlay {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #overlay { 
+    animation: colorcycle 10s infinite; 
+    filter: alpha(opacity=50);
+    opacity: 0.8;
+  }
+  
+  @keyframes colorcycle {
+    0%   {background: #FFF;}
+    50%  {background: #34495e;}
+    100% {background: #fff;}
+  }
+
+#index h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0 auto;
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#index h2 {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+    background-color: #f0f0f0;
+}
+
+ .section1 {
+    width: 90%;
+    margin: 0 auto;
+    color: #34495e;
+    margin-bottom: 5rem;
+}
+
+.section1 h1 {
+    margin-top: 20vh;
+}
+
+img {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  margin-bottom: 4rem;
+  width: 25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__title {
+  color: grey;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+#section2 {
+    margin: 0 auto;
+    padding-top: 90px;
+    width:100%;
+    color: #34495e;
+    background-color: #ffffff;
+}
+
+#hållbarhetWrapper, #underhållWrapper, #grusvägarWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.textContent {
+    width: 45%;
+    font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  padding-top: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.imgContent {
+    width: 55%;
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+#underhållWrapper .imgContent {
+    background-image: url(/img/kattsov.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: screen;
+    width: 50%;
+}
+
+#grusvägarWrapper .imgContent {
+    background-image: url(/img/katttoa.jpg);
+    width: 50%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #34495e;
+    color: white;
+    align-self: flex-end;
+}
+
+/*---------MEDIA QUERIES----------*/
+
+/*NAVIGERING*/
+@media (min-width: 769px) {
+	.nav,
+	.main-nav {
+		display: flex;
+	}
+	.nav {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+    ul li ul {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1025px) {
+	.nav {
+		flex-direction: row;
+		justify-content: space-between;
+    width: 100%;
+	}
+}
