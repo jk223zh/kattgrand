@@ -40,7 +40,12 @@ body {
 
 main {
     grid-area: main;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
+}
+
+hr {
+    margin: 15%;
+    color: #34495e79;
 }
 
 /*Navigering*/
@@ -195,7 +200,6 @@ a {
 /*section2 GALLERI*/
 
 #section2 {
-    padding-top: 90px;
     padding-left: 2%;
     padding-right: 2%;
     width: 100%;
@@ -211,56 +215,19 @@ a {
 
 /*section3 UTFLYKTSMÅL*/
  #section3 {
-    width: 99%;
     color: #34495e;
+    padding-left: 2%;
+    padding-right: 2%;
     margin-bottom: 5vh;
+    background-color: #fff;
 }
 
 #section3 h1 {
-    margin-top: 20vh;
+    text-align: center;
 }
 
-img {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
- 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: space-around;
-  padding: 1%;
-}
-
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  width: 42vh;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1%;
-}
-
-.card__content {
-  display: flex;
-  flex-direction: column;
-  padding: 1vh;
-}
-
-.card__title {
-  color: grey;
-  font-size: 2vh;
-  font-weight: 400;
-  letter-spacing: 0.5vh;
-  text-transform: uppercase;
-}
-
-.card__text {
-  font-size: 2vh;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
+#section3 p {
+    text-align: center;
 }
 
 /* Footer BOKNING*/
@@ -275,7 +242,6 @@ footer {
 #bokninng {
     padding-left: 2%;
     padding-right: 2%;
-    width: 100%;
 }
 
 
@@ -293,10 +259,16 @@ footer {
         background-color: rgb(199, 20, 20);
 	}
 
+    #section1, #section2, #section3 {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
 /*section3 Utflyktsmål*/
     .card {
-        width: 60vh;
+        width: 80vh;
         margin-bottom: 2vh;
+        flex-direction: column;
       }
 }
 
@@ -314,13 +286,15 @@ footer {
         width: 40%;
     }
 /*Section3*/
+.cards {
+    width: 100vh;
+}
     .card {
-        width: 50vh;
+        width: 100vh;
         margin-bottom: 2vh;
       }
       #section3 {
         margin: 0 auto;
-        padding-top: 90px;
         width:100%;
         color: #34495e;
         background-color: #ffffff;
@@ -338,7 +312,7 @@ footer {
     .textContent {
         width: 45%;
         font-size: 0.875rem;
-      line-height: 1.5;
+      line-height: 7rem;
       margin-bottom: 1.25rem;
       padding-top: 5%;
       padding-left: 2.5%;
