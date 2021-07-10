@@ -1,3 +1,4 @@
+/*Dokument*/
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
@@ -8,15 +9,14 @@ html {
       
   }
 
-html, body, header, main, section, footer{
+html, body, header, main, section, footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
-    height: 100%;
+    max-width: 100%;
     background-color: rgb(255, 255, 255);    
     color: gray;
     font-family: Mulish;
@@ -33,10 +33,36 @@ body {
     "footer";
 }
 
-
+/* Smått o gott*/
 .center{
     text-align: center;
 }
+
+main {
+    grid-area: main;
+    background-color: #f0f0f0;
+}
+
+/*Navigering*/
+#nav {
+    grid-area: nav;
+    z-index: 1;
+    margin: 0 auto;
+      padding-bottom: .5vh;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 100px 0px rgb(255, 255, 255);
+      
+  }
+  
+  .logo {
+      background-image: url(/img/kattgrändlogga.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: none;
+      height: 20vh;
+      width: 40vh;
+      margin: 0 auto;
+  }
 
 ul {
   margin: 0;
@@ -58,7 +84,7 @@ a {
 }
 
 .main-nav {
-	margin-top: 15vh;
+	margin-top: 5vh;
     width: 40vh;
 }
 
@@ -74,27 +100,8 @@ a {
 	color: #718daa;
 }
 
-.nav {
-  grid-area: nav;
-  z-index: 1;
-  margin: 0 auto;
-	padding-bottom: .5vh;
-	background-color: #d5e409;
-	box-shadow: 0px 0px 100px 0px rgb(255, 255, 255);
-    
-}
-
-.logo {
-    background-image: url(/img/kattgrändlogga.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: none;
-    height: 20vh;
-    width: 40vh;
-    margin: 0 auto;
-}
-
-#index {
+/* Header*/
+#header {
     grid-area: header;
     display: border-box;
     background-image: url(/img/kattkok.jpg);
@@ -104,7 +111,21 @@ a {
     height: 90vh;
 }
 
-html, body, #hero, #overlay {
+#header h1 {
+    color: #ffffff;
+    font-size: 5vh;
+    margin: 0 auto;
+    position: absolute;
+    margin-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/*Overlay som blinkar*/
+#blinkar, #overlay {
     height: 100%;
     width: 100%;
     min-height: 100%;
@@ -125,96 +146,20 @@ html, body, #hero, #overlay {
     100% {background: #fff;}
   }
 
-#index h1 {
-    color: #ffffff;
-    font-size: 5vh;
-    margin: 0 auto;
-    position: absolute;
-    margin-top: 30vh;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
 
-#index h2 {
-    color: rgb(0, 0, 0);
-    font-size: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 18rem;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
+/* ------------ Sections --------- */
 
-main {
-    grid-area: main;
-    background-color: #f0f0f0;
-}
-
- .section1 {
-    width: 100%;
-    color: #34495e;
-    margin-bottom: 5rem;
-}
-
-.section1 h1 {
-    margin-top: 20vh;
-}
-
-img {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
- 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  justify-content: space-evenly;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  width: 33vh;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-}
-
-.card__content {
-  display: flex;
-  flex-direction: column;
-  padding: 2vh;
-}
-
-.card__title {
-  color: grey;
-  font-size: 3vh;
-  font-weight: 300;
-  letter-spacing: 0.5vh;
-  text-transform: uppercase;
-}
-
-.card__text {
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-
-#section2 {
+/*Section1 OM KATTGRÄND*/
+#section1 {
     padding-top: 90px;
+    padding-left: 2%;
+    padding-right: 2%;
     width: 100%;
     color: #34495e;
     background-color: #ffffff;
 }
 
-#hållbarhetWrapper, #underhållWrapper, #grusvägarWrapper {
+#omKattgränd, #galleri {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -229,8 +174,6 @@ img {
   line-height: 1.5;
   margin-bottom: 1.25rem;
   padding-top: 5%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
 }
 
 .imgContent {
@@ -241,7 +184,7 @@ img {
     overflow-x: hidden;
 }
 
-#underhållWrapper .imgContent {
+#omKattgränd .imgContent {
     background-image: url(/img/kattsov.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -249,10 +192,78 @@ img {
     width: 100%;
 }
 
-#grusvägarWrapper .imgContent {
+/*section2 GALLERI*/
+
+#section2 {
+    padding-top: 90px;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 100%;
+    color: #34495e;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+#galleri .imgContent {
     background-image: url(/img/katttoa.jpg);
     width: 100%;
 }
+
+/*section3 UTFLYKTSMÅL*/
+ #section3 {
+    width: 99%;
+    color: #34495e;
+    margin-bottom: 5vh;
+}
+
+#section3 h1 {
+    margin-top: 20vh;
+}
+
+img {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  width: 42vh;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1vh;
+}
+
+.card__title {
+  color: grey;
+  font-size: 2vh;
+  font-weight: 400;
+  letter-spacing: 0.5vh;
+  text-transform: uppercase;
+}
+
+.card__text {
+  font-size: 2vh;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Footer BOKNING*/
 
 footer {
     grid-area: footer;
@@ -264,22 +275,20 @@ footer {
 
 
 /*---------MEDIA QUERIES----------*/
-
-/*NAVIGERING*/
 @media (min-width: 769px) {
-    
-
-	.nav,
+/*NAVIGERING*/
+	#nav,
 	.main-nav {
 		display: flex;
         width: 100%;
         justify-content: space-evenly;
 	}
-	.nav {
+	#nav {
 		flex-direction: column;
         background-color: rgb(199, 20, 20);
 	}
 
+/*section3 Utflyktsmål*/
     .card {
         width: 60vh;
         margin-bottom: 2vh;
@@ -287,21 +296,24 @@ footer {
 }
 
 @media (min-width: 1025px) {
-	.nav {
+
+/*navigering*/
+	#nav {
 		flex-direction: row;
 		justify-content: space-evenly;
     width: 100%;
-    background-color: rgb(19, 99, 16);
+    background-color: rgb(40, 146, 37);
 	}
 
     .main-nav {
         width: 40%;
     }
+/*Section3*/
     .card {
         width: 50vh;
         margin-bottom: 2vh;
       }
-      #section2 {
+      #section3 {
         margin: 0 auto;
         padding-top: 90px;
         width:100%;
@@ -309,7 +321,7 @@ footer {
         background-color: #ffffff;
     }
     
-    #hållbarhetWrapper, #underhållWrapper, #grusvägarWrapper {
+    #omKattgränd, #galleri {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -336,7 +348,7 @@ footer {
         overflow-x: hidden;
     }
     
-    #underhållWrapper .imgContent {
+    #omKattgränd .imgContent {
         background-image: url(/img/kattsov.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -344,7 +356,7 @@ footer {
         width: 50%;
     }
     
-    #grusvägarWrapper .imgContent {
+    #galleri .imgContent {
         background-image: url(/img/katttoa.jpg);
         width: 50%;
     }
